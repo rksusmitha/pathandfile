@@ -16,9 +16,9 @@ jobs:
                 - uses: actions/setup-node@v1
                   with:
                      node-version: ${{ matrix.node }}
-                - id: step3
-                - run: npm install
-                - id: step4
-                - run: npm run build --if-present
-                - id: step5
-                - run: node learnfile.js
+                - name: step3
+                  run: npm install
+                - name: step4
+                  run: npm run build --if-present
+                - name: step5
+                  run: node learnfile.js
