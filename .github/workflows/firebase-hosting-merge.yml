@@ -11,10 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list of scripts
-        run: cd pathandfile/pathandfile
+        run: |
+             cd pathandfile/pathandfile
              npm run
       - uses: actions/checkout@v3
-      - run: cd pathandfile/pathandfile
+      - run: |
+             cd pathandfile/pathandfile
              npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
