@@ -31,3 +31,5 @@ jobs:
                        git add .
                        git commit -m "generated"
                        git push
+                - name : secret variable
+                  run : echo "${{ secrets.some_token }}"
