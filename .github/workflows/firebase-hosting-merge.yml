@@ -12,11 +12,11 @@ jobs:
     steps:
       - name: list of scripts
         run: |
-             cd pathandfile/pathandfile
+             cd /rksusmitha/pathandfile
              npm run
       - uses: actions/checkout@v3
       - run: |
-             cd pathandfile/pathandfile
+             cd /rksusmitha/pathandfile
              npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
