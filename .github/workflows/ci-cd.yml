@@ -7,6 +7,7 @@ jobs:
     deploy_to_live:
             name: Deploy prod hosting
             runs-on: ubuntu-latest
+            environment: Integration environment
             strategy: 
               matrix: 
                 node: [12]
