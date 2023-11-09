@@ -35,8 +35,11 @@ const fs = require("fs");
 //   }
 // });
 
-fs.appendFile("myfile.txt", "/n Hello World from github", (err) => {
+fs.appendFile("myfile.txt", "Hello World", (err) => {
   if (err) {
     console.log(err);
+  }
+  {
+    console.log("file edit");
   }
 });

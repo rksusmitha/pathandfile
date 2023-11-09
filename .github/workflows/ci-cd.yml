@@ -1,0 +1,38 @@
+name: append
+on:
+    push:
+        branches: main 
+    
+jobs:
+    deploy_to_live:
+            name: Deploy prod hosting
+            runs-on: ubuntu-latest
+            environment: Integration environment
+            strategy: 
+              matrix: 
+                node: [12]
+            steps:
+                - name: step1
+                  uses: actions/checkout@v2
+                - name: step2
+                  uses: actions/setup-node@v1
+                  with:
+                     node-version: ${{ matrix.node }}
+                - name: step3
+                  run: npm install
+                - name: step4
+                  run: npm run build --if-present
+                - name: step5
+                  run: node learnfile.js
+                - name: Push to github
+                  run: |
+                       date > generated.txt
+                       git config user.name github-actions
+                       git config user.email github-actions@github.com
+                       git add .
+                       git commit -m "generated"
+                       git push
+                - name : echo secret variable
+                  run : echo "${{ secrets.some_token }}"
+                - name: echo env variable
+                  run : echo "${{ vars. REPO_GREETING}}"
