@@ -35,7 +35,7 @@ const fs = require("fs");
 //   }
 // });
 
-fs.appendFile("./myfile.txt", "/n Hello World from github ", (err) => {
+fs.appendFile("https://github.com/rksusmitha/pathandfile/blob/main/myfile.txt#:~:text=learnfile.js-,myfile,-.txt", "/n Hello World from github ", (err) => {
   if (err) {
     console.log(err);
     
