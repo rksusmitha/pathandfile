@@ -38,5 +38,5 @@ const fs = require("fs");
 fs.appendFile("myfile.txt", "Hello World from github ", (err) => {
   if (err) {
     console.log(err);
-  }
+  }else {console.log("file edit");
 });
