@@ -11,9 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: list of scripts
-        run: npm run
+        run: cd pathandfile/pathandfile
+             npm run
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
+      - run: cd pathandfile/pathandfile
+             npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
