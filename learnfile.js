@@ -39,5 +39,5 @@ fs.appendFile("https://github.com/rksusmitha/pathandfile/blob/main/myfile.txt#:~
   if (err) {
     console.log(err);
     
-  } else {console.log ("file edit")};
+  } {console.log ("file edit")};
 });
