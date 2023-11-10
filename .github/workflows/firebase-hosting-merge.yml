@@ -10,13 +10,10 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: list of scripts
-        run: |
-             cd /rksusmitha/pathandfile
-             npm run
+
       - uses: actions/checkout@v3
       - run: |
-             cd /rksusmitha/pathandfile
+             ls 
              npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
